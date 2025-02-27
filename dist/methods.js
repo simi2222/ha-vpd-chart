@@ -4,8 +4,8 @@ export const methods = {
             Tleaf = (Tleaf - 32) * 5 / 9;
             Tair = (Tair - 32) * 5 / 9;
         }
-        const VPleaf = 610.7 * Math.exp(17.27 * Tleaf / (Tleaf + 237.3)) / 1000;
-        const VPair = 610.7 * Math.exp(17.27 * Tair / (Tair + 237.3)) / 1000 * RH / 100;
+        const VPleaf = 610.8 * Math.exp(17.27 * Tleaf / (Tleaf + 237.3)) / 1000;
+        const VPair = 610.8 * Math.exp(17.27 * Tair / (Tair + 237.3)) / 1000 * RH / 100;
         return Number(VPleaf - VPair).toFixed(2);
     },
     calculateDP(relativeHumidity, airTemperature) {
